@@ -74,9 +74,10 @@ body {
 }
 
 .portfolio-repetitions p {
+    -webkit-text-stroke: 3px #66734a;
     font-family: "Fontdiner Swanky", serif;
     font-size: 6rem;
-    color: #f3ebd9;
+    color: #d1c4a4;
     margin: 5px 0;
     
     transform: translate(7%,-310%);
