@@ -5,7 +5,7 @@ body {
     font-family: 'Arial', sans-serif;
     background-color:#d1c4a4;
     background-size: cover;
-    color: #fff; /* Texte en blanc */
+    color: #f3ebd9;
 }
 
 /* Navbar Styles */
@@ -45,21 +45,42 @@ body {
 }
 
 /* Content Styles */
-.content {
+
+.home {
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%);
     text-align: center;
 }
-
-.content h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    color: #fff; /* Texte en blanc */
+.home img{
+    position: relative;
+    transform: translate(-50%, 50%);
+    z-index: 2;
 }
-
-.content p {
-    font-size: 1.5rem;
+.home h1 {
+    position: relative;
+    font-family: "Fontdiner Swanky", serif;
+    font-size: 6rem;
+    font-weight: lighter;
     color: #f3ebd9;
+    transform: translate(7%,-260%);
+    z-index: 3;
 }
+.portfolio-repetitions {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+.portfolio-repetitions p {
+    font-family: "Fontdiner Swanky", serif;
+    font-size: 6rem;
+    color: #f3ebd9;
+    margin: 5px 0;
+    
+    transform: translate(7%,-310%);
+}
+
+
+
