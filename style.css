@@ -11,10 +11,17 @@ body {
     padding: 0;
     font-family: 'Arial', sans-serif;
     background-color: var(--bg-color);
-    background-size: cover;
     color: var(--text-color);
     scroll-behavior: smooth;
     overflow-x: hidden;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+}
+
+/* Sections */
+section {
+    height: 100vh; /* Chaque section occupe toute la hauteur de l'écran */
+    scroll-snap-align: start; /* Point d'accroche au début de la section */
 }
 
 /* Navbar Styles */
@@ -92,16 +99,19 @@ body {
     font-size: 6rem;
     color: var(--bg-color);
     margin: 5px 0;
-    transform: translate(7%, -315%);
+    transform: translate(7%, -330%);
 }
 
 /* About Section Styles */
 .about {
+    padding-top: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: var(--text-color);
-    height: 100vh;
+    height: 120vh;
+    
+    flex-direction: column;
 }
 
 .about-container {
@@ -112,7 +122,7 @@ body {
     width: 100%;
     background-color: var(--navbar-color);
     border-radius: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 5vh;
 }
 
 .about-text {
@@ -136,4 +146,128 @@ body {
     font-size: 1.2rem;
     line-height: 1.6;
     transform: translate(0, -50%);
+}
+
+
+.about-down{
+    transform: translate(5vw,3vh);
+}
+
+
+.portfolio{
+    margin-top: 20vh;
+    padding-bottom: 20vh;
+}
+.carousel {
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: var(--navbar-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    display: block;
+}
+
+.carousel-item h3 {
+    background-color: var(--navbar-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 10px 0;
+    font-family: 'Fontdiner Swanky', serif;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--navbar-color);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.carousel-button.left {
+    left: 10px;
+}
+
+.carousel-button.right {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    
+    color: var(--bg-color);
+}
+
+
+/* Styles pour la modale */
+.modal {
+    display: none; /* Cacher la modale par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fond sombre */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: var(--navbar-color);
+    padding: 20px;
+    border-radius: 20px;
+    width: 70%;
+    max-width: 1000px; /* Limite de largeur pour s'adapter aux écrans plus grands */
+    text-align: center;
+    color: var(--text-color);
+    position: relative;
+}
+
+#modal-title {
+    font-family: 'Fontdiner Swanky', serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    transform: translateY(-20px);
+}
+
+#modal-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-color);
+    background: none;
+    border: none;
 }
